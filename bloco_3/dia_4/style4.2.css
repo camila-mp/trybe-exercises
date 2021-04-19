@@ -7,3 +7,14 @@ h1, h2 {
 h3, p, ul {
     font-family: 'Roboto';
 }
+
+.navlinks li {
+    display: inline;
+    
+
+}
+
+ul {
+    list-style-type: none;
+    
+}
