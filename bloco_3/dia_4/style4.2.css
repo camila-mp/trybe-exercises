@@ -1,0 +1,9 @@
+h1, h2 {
+    font-family: 'Arial';
+    color: darkcyan;
+    font-weight: bold;
+}
+
+h3, p, ul {
+    font-family: 'Roboto';
+}
