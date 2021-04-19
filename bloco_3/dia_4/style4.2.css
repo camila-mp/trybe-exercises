@@ -9,12 +9,14 @@ h3, p, ul {
 }
 
 .navlinks li {
-    display: inline;
-    
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    background-color: lavender;
 
 }
 
 ul {
     list-style-type: none;
-    
 }
