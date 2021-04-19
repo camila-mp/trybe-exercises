@@ -1,0 +1,38 @@
+div {
+    padding: 1px;
+}
+
+div:hover {
+    border-style: dotted;
+    border-color:limegreen;
+    width: 160px;
+}
+
+.corprimaria, .classe1 { 
+    color: red;
+    font-style: italic;
+}
+
+.corsecundaria, .classe2 {
+    color: orange;
+    font-family: 'Berkshire Swash';
+}
+
+.corcomplementar, .classe3 {
+    color: rgba(253, 209, 86, 0.966);
+    font-style: italic;
+    background-color: rgba(121, 80, 235, 0.966);
+    width: 160px;
+    border-radius: 5px;
+}
+
+.corescura, .classe4 {
+    color: darkblue;
+    font-size: 30px;
+}
+
+.corclara, .classe5 {
+    color: rgb(181, 220, 245);
+    font-family: 'Acme';
+    font-style: italic;
+}
