@@ -1,7 +1,7 @@
-let array=[]
+let array=[];
 
 for (numero=1; numero <= 25; numero += 1){
-    array.push(numero)
+    array.push(numero);
 }
 
-console.log(array)
+console.log(array);
