@@ -1,7 +1,15 @@
-let array=[];
+let a=50;
 
-for (numero=1; numero <= 25; numero += 1){
-    array.push(numero/2);
+let b=14;
+
+let c=8;
+
+let ehimpar=false;
+
+if ((a%2!==0) || (b%2!==0) || (c%2!==0)) {
+    ehimpar=true;
+    console.log(ehimpar);
 }
-
-console.log(array);
+else {
+    console.log (ehimpar);
+}

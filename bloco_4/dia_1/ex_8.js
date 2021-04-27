@@ -1,7 +1,16 @@
-let array=[];
 
-for (numero=1; numero <= 25; numero += 1){
-    array.push(numero);
+let a=5;
+
+let b=13;
+
+let c=1;
+
+let isEven=false;
+
+if ((a%2===0) || (b%2===0) || (c%2===0)) {
+    isEven=true
+    console.log(isEven);
 }
-
-console.log(array);
+else {
+    console.log (isEven)
+}

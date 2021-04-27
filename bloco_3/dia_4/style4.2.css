@@ -1,0 +1,39 @@
+h1, h2 {
+    font-family: 'Arial';
+    color: darkcyan;
+    font-weight: bold;
+}
+
+h3, p, ul {
+    font-family: 'Roboto';
+}
+
+p {
+    text-align: justify;
+    width: 80%;
+}
+
+a {
+    text-decoration: none;
+}
+
+td, th {
+    padding: 2px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.navlinks {
+    display: inline;
+    margin: 0%;
+    padding: 15px;
+    border: solid rgb(0, 204, 204);
+    background-color: lavender;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    <!-- esses 3 itens acima removem a configuração padrão das 'ul'-->
+}
