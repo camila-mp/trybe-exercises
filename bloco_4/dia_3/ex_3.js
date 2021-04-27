@@ -1,12 +1,17 @@
 let n = 5;
-let star = '*';
-let linha = ' ';
+let symbol = '*';
+let inputLine = '';
+let inputPosition = n;
 
-for (numBlanks = n-1; numBlanks > 0; numBlanks -= 1){
-    linha = linha + linha;
-    
+for (let lineIndex = 0; lineIndex < n; lineIndex += 1) {
+  for (let columnIndex = 0; columnIndex <= n; columnIndex += 1) {
+    if (columnIndex < inputPosition) {
+      inputLine = inputLine + ' ';
+    } else {
+      inputLine = inputLine + symbol;
+    }
+  }
+  console.log(inputLine);
+  inputLine = '';
+  inputPosition -= 1;
 };
-
-let resultado = linha + star;
-
-console.log(resultado);
