@@ -39,10 +39,26 @@
       </div>
     </div>
     <script>
+//----------------------------
         function mudaTagP () {
             document.getElementsByTagName('p')[0].innerText = 'Eu me vejo bem sucedida daqui a 2 anos. Eu realmente não sei mais o que escrever. Estou atrasada com esse exercicio por causa do problema no maldito driver da placa de video.'
         }
-        mudaTagP()
+        mudaTagP();
+//----------------------------
+        function mudaCorQuad () {
+            document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(76,164,109)';
+        }
+
+        mudaCorQuad();
+//----------------------------
+
+function mudaCorQuadCent () {
+            document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white';
+        }
+
+        mudaCorQuadCent ();
+
+//---------------------------
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
