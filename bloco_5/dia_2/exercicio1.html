@@ -57,6 +57,29 @@
   </head>
   <body>
     <script>
+        let h1 = document.createElement('h1');
+        document.body.appendChild(h1);
+        h1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+
+        let divmain = document.createElement('div');
+        divmain.className = 'main-content';
+        document.body.appendChild(divmain);
+        divmain.innerHTML = 'testando div main';
+
+        let divCenterCont = document.createElement('div');
+        divCenterCont.className = 'center-content';
+        divmain.appendChild(divCenterCont);
+        
+        let parag1 = document.createElement('p');
+        divCenterCont.appendChild(parag1);
+        parag1.innerHTML = 'oi tudo bem agora sao quase 19 horas';
+
+        let divLeftCont = document.createElement('div');
+        divmain.appendChild(divLeftCont);
+
+        let divRightCont = document.createElement('div');
+        divmain.appendChild(divRightCont);
+
       // COLOQUE SEU CÓDIGO AQUI
     </script>
   </body>
