@@ -74,9 +74,11 @@
         parag1.innerHTML = 'oi tudo bem agora sao quase 19 horas';
 
         let divLeftCont = document.createElement('div');
+        divLeftCont.className = 'left-content';
         divmain.appendChild(divLeftCont);
 
         let divRightCont = document.createElement('div');
+        divRightCont.className = 'right-content';
         divmain.appendChild(divRightCont);
 
         let imagem1 = document.createElement('img');
@@ -95,10 +97,17 @@
         for(let index=1; index <= 3; index +=1){
           let h3 = document.createElement('h3');
           divmain.appendChild(h3);
+          h3.className = 'description'
         }
 
         h1.className = 'title';
-        
+
+        divmain.removeChild(divLeftCont);
+
+        divRightCont.style.marginRight = 'auto';
+
+        divmain.style.backgroundColor = 'green';
+
 
       // COLOQUE SEU CÓDIGO AQUI
     </script>
