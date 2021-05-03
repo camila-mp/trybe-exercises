@@ -22,17 +22,19 @@ function createDaysOfTheWeek() {
       for (index = 0; index < dezDaysList.length; index += 1){
         let day = document.createElement('li');
         ulDays.appendChild(day);
-        day = dezDaysList[index];
+        day.innerHTML = dezDaysList[index];
         day.className = 'day';
 
         if (day === 24 || day === 25 || day === 31){
             day.className = 'holiday';
             if (day === 25){
                 day.className='friday';
-            }
-        }
+            };
+        };
         if (day === 4 || day === 11 || day === 18){
-            day.className = 'friday'
-        } 
-      }
-  }
+            day.className = 'friday';
+        }; 
+      };
+  };
+
+  createDaysOfTheMonth();
