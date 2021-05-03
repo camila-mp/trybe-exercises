@@ -64,7 +64,6 @@
         let divmain = document.createElement('div');
         divmain.className = 'main-content';
         document.body.appendChild(divmain);
-        divmain.innerHTML = 'testando div main';
 
         let divCenterCont = document.createElement('div');
         divCenterCont.className = 'center-content';
@@ -87,11 +86,18 @@
 
         let ul1 = document.createElement('ul');
         divRightCont.appendChild(ul1);
-        for (index = 1; index <= 10; index += 1){
+        for (let index = 1; index <= 10; index += 1){
           let liNum = document.createElement('li');
           ul1.appendChild(liNum);
           liNum.innerHTML = index;
         }
+        
+        for(let index=1; index <= 3; index +=1){
+          let h3 = document.createElement('h3');
+          divmain.appendChild(h3);
+        }
+
+        h1.className = 'title';
         
 
       // COLOQUE SEU CÓDIGO AQUI
