@@ -88,10 +88,12 @@
 
         let ul1 = document.createElement('ul');
         divRightCont.appendChild(ul1);
-        for (let index = 1; index <= 10; index += 1){
+
+        let lista = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+        for (let index = 0; index < lista.length; index += 1){
           let liNum = document.createElement('li');
           ul1.appendChild(liNum);
-          liNum.innerHTML = index;
+          liNum.innerHTML = lista[index];
         }
         
         for(let index=1; index <= 3; index +=1){
