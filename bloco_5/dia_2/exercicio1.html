@@ -57,6 +57,7 @@
   </head>
   <body>
     <script>
+        //primeira parte
         let h1 = document.createElement('h1');
         document.body.appendChild(h1);
         h1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
@@ -99,19 +100,33 @@
         for(let index=1; index <= 3; index +=1){
           let h3 = document.createElement('h3');
           divmain.appendChild(h3);
-          h3.className = 'description'
         }
 
-        h1.className = 'title';
+        //segunda parte//
 
+        //ex. 1
+        const title = document.getElementsByTagName('h1')[0];
+        title.className = 'title';
+        
+        //ex. 2
+        const allH3 = document.querySelectorAll('h3');
+        for (key in allH3){
+          allH3[key].className = 'description';
+        };
+
+        //ex.3
         divmain.removeChild(divLeftCont);
 
+        //ex. 4
         divRightCont.style.marginRight = 'auto';
+        
+        //ex. 5
+        divCenterCont.parentNode.style.backgroundColor = 'green';
 
-        divmain.style.backgroundColor = 'green';
-
-
-      // COLOQUE SEU CÓDIGO AQUI
+        //ex. 6
+        let elementosLi = document.getElementsByTagName('li');
+        ul1.removeChild(elementosLi[9]);
+        ul1.removeChild(elementosLi[8]);
     </script>
   </body>
 </html>
