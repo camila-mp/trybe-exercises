@@ -60,16 +60,26 @@ function createDaysOfTheWeek() {
   function eventHolidayBtn () {
     let clickFeriado = document.getElementById('btn-holiday');
     let holidayDays = document.querySelectorAll('.holiday');
-    clickFeriado.addEventListener('click', function (){
-      let backgroundHoliday = holidayDays.style.backgroundColor;
-      if (backgroundHoliday == 'rgb(238,238,238)'){
-        backgroundHoliday === 'orange';
-      }else{
-        backgroundHoliday === 'rgb(238,238,238)';
-      }
+    clickFeriado.addEventListener('click', function() {
+      for (let index = 0; index < holidayDays.length; index += 1){
+        if (holidayDays[index].style.backgroundColor === 'yellow'){
+          holidayDays[index].style.backgroundColor = 'rgb(238,238,238)';
+        } else {
+          holidayDays[index].style.backgroundColor = 'yellow';
+        };
+      };
     });
   };
 
   eventHolidayBtn();
 
+  //exercicio 4
 
+  function fridayBtn (string) {
+    let fridayButton = document.createElement('button');
+    fridayButton.id = 'btn-friday';
+    document.getElementsByClassName('buttons-container')[0].appendChild(fridayButton);
+    fridayButton.innerHTML = 'Sexta-feira';
+  };
+
+  fridayBtn('Sexta-feira');
