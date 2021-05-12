@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  margin: 6px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+}
+
+textarea {
+  resize: none;
+  display: inline-block;
+  margin: 5px 0px 0px 0px; 
+}
+
+label {
+  display: inline-block;
+  text-align: left;
+  width: 120px;
+  height: 30px;
+  margin: 0px 0px 0px 5px;
+  font-family: sans-serif;
+}
+
+label#label-nome {
+  margin-top: 10px;
+}
+
+label#label-apart{
+  width: 95px;
+  height: 30px;
+  margin-right: 2px;
+}
+
+label#label-casa{
+  width: 45px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+label#label-resumo {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    width: 120px;
+    height: 40px;
+}
