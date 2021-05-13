@@ -9,52 +9,56 @@
   <title>Formulário</title>
 </head>
 <body>
-  <header><h1>Formulário</h1></header>
+  <header class="hero is-primary"><h1 class="title is-1">Formulário</h1></header>
+  <h2 class="subtitle is-3">Dados pessoais</h2>
   <form action="" method="GET">
-    <div>
-      <h2>Dados pessoais</h2>
-      <label for="nome-compl" id="label-nome">Nome completo</label>
-      <input type="text" id="nome-compl" name="input-nome" maxlength="40" required><br><br>
+    <div class="field">
+      <label class="label" for="nome-compl" id="label-nome">Nome completo</label>
+      <input class="input is-primary" type="text" id="nome-compl" name="input-nome" maxlength="40" required><br><br>
 
-      <label for="email">Email</label>
-      <input type="text" id="email" name="input-email" maxlength="50" required><br><br>
+      <label class="label" for="email">Email</label>
+      <input class="input is-primary" type="text" id="email" name="input-email" maxlength="50" required><br><br>
 
-      <label for="cpf">CPF</label>
-      <input type="text" id="cpf" name="input-cpf" maxlength="11" required><br><br>
+      <label class="label" for="cpf">CPF</label>
+      <input class="input is-primary" type="text" id="cpf" name="input-cpf" maxlength="11" required><br><br>
 
-      <label for="endereco">Endereço</label>
-      <input type="text" id="endereco" name="input-end" maxlength="200" required><br><br>
+      <label class="label" for="endereco">Endereço</label>
+      <input class="input is-primary" type="text" id="endereco" name="input-end" maxlength="200" required><br><br>
 
-      <label for="cidade">Cidade</label>
-      <input type="text" id="cidade" name="input-cidade" maxlength="28" required><br><br>
+      <label class="label" for="cidade">Cidade</label>
+      <input class="input is-primary" type="text" id="cidade" name="input-cidade" maxlength="28" required><br><br>
 
-      <label for="select-estado">Estado</label>
-      <select name="input-estado" id="select-estado" required>
-      </select><br><br>
+      <label class="label" for="select-estado">Estado</label>
+      <div class="select is-primary">
+        <select name="input-estado" id="select-estado" required></select>
+      </div><br><br>
 
-      <label for="end-apart" id="label-apart">Apartamento</label>
-      <input type="radio" id="end-apart" name="tipo-endereco" value="apartamento"required>
-      <label for="end-casa" id="label-casa">Casa</label>
-      <input type="radio" id="end-casa" name="tipo-endereco" value="casa"required><br><br>
+        <label class="radio" for="end-apart" id="label-apart">
+          Apartamento
+          <input class="radio" type="radio" id="end-apart" name="tipo-endereco" value="apartamento"required>
+        </label>
+
+        <label class="radio" for="end-casa" id="label-casa">
+          Casa
+          <input class="radio" type="radio" id="end-casa" name="tipo-endereco" value="casa"required>
+        </label>
+    </div>
+
+    <h2 class="subtitle is-3">Experiências</h2>
+    <div class="field">
+      <label class="label" for="textarea-resumo" id="label-resumo">Resumo do currículo</label>
+      <textarea class="textarea is-primary" name="resumo-curriculo" id="textarea-resumo" maxlength="1000" rows="10" cols="40" required></textarea><br><br>
+
+      <label class="label" for="cargo1">Cargo 1</label>
+      <input class="input is-primary" type="text" id="cargo1" name="input-cargo1" maxlength="40" required><br>
+      <label class="label" for="desc-cargo1">Descrição</label>
+      <input class="input is-primary" type="text" id="desc-cargo1" name="input-cargo1-desc" maxlength="500" required><br>
+      <label class="label" for="data-inicio">Data de início</label>
+      <input class="input is-primary" type="text" id="data-inicio" name="input-datainicio" required><br><br>
+    </div>
     
-    </div>
-    <br>
-    <div>
-      <h2>Experiências</h2>
-      <label for="textarea-resumo" id="label-resumo">Resumo do currículo</label>
-      <textarea name="resumo-curriculo" id="textarea-resumo" maxlength="1000" rows="10" cols="40" required></textarea><br><br>
-
-      <label for="cargo1">Cargo 1</label>
-      <input type="text" id="cargo1" name="input-cargo1" maxlength="40" required><br>
-      <label for="desc-cargo1">Descrição</label>
-      <input type="text" id="desc-cargo1" name="input-cargo1-desc" maxlength="500" required><br>
-      <label for="data-inicio">Data de início</label>
-      <input type="text" id="data-inicio" name="input-datainicio" required><br><br>
-
-
-
-    </div>
   </form>
+  <button class="button is-primary" id="btn-enviar">Enviar</button>
   <script src="script.js"></script>
 </body>
 </html>
