@@ -13,41 +13,46 @@
   <h2 class="form-header">Dados pessoais</h2>
   <form action="" method="GET">
     <div class="form-group">
+
       <div class="mb-3">
         <label class="form-label" for="nome-compl" id="label-nome">Nome completo</label>
-        <input class="form-control type="text" id="nome-compl" name="input-nome" maxlength="40" required><br>
+        <input class="form-control type="text" id="nome-compl" name="input-nome" maxlength="40" required>
       </div>
+
       <div class="mb-3">
         <label class="form-label" for="email">Email</label>
-        <input class="form-control" type="text" id="email" name="input-email" maxlength="50" required><br>
+        <input class="form-control" type="text" id="email" name="input-email" maxlength="50" required>
       </div>
 
-      <label class="form-label" for="cpf">CPF</label>
-      <input class="form-control" type="text" id="cpf" name="input-cpf" maxlength="11" placeholder="000.000.000-00" required><br><br>
-
-      <label class="form-label" for="endereco">Endereço</label>
-      <input class="form-control" type="text" id="endereco" name="input-end" maxlength="200" required><br><br>
-
-      <label class="form-label" for="cidade">Cidade</label>
-      <input class="form-control" type="text" id="cidade" name="input-cidade" maxlength="28" required><br><br>
-
-      <label class="label" for="select-estado">Estado</label>
       <div class="mb-3">
+        <label class="form-label" for="cpf">CPF</label>
+        <input class="form-control" type="text" id="cpf" name="input-cpf" maxlength="11" placeholder="000.000.000-00" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="endereco">Endereço</label>
+        <input class="form-control" type="text" id="endereco" name="input-end" maxlength="200" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="cidade">Cidade</label>
+        <input class="form-control" type="text" id="cidade" name="input-cidade" maxlength="28" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="select-estado">Estado</label>
         <select name="input-estado" id="select-estado" required></select>
-      </div><br><br>
+      </div>
 
         <label class="radio" for="end-apart" id="label-apart">
-          Apartamento
-          <input class="radio" type="radio" id="end-apart" name="tipo-endereco" value="apartamento"required>
-        </label>
-
+          Apartamento</label>
+        <input class="radio" type="radio" id="end-apart" name="tipo-endereco" value="apartamento"required>
         <label class="radio" for="end-casa" id="label-casa">
-          Casa
-          <input class="radio" type="radio" id="end-casa" name="tipo-endereco" value="casa"required>
-        </label>
+          Casa </label>
+        <input class="radio" type="radio" id="end-casa" name="tipo-endereco" value="casa"required>
+        
     </div>
 
-    <h2 class="subtitle is-3">Experiências</h2>
+    <h2 class="form-header">Experiências</h2>
     <div class="field">
       <label class="label" for="textarea-resumo" id="label-resumo">Resumo do currículo</label>
       <textarea class="textarea is-primary" name="resumo-curriculo" id="textarea-resumo" maxlength="1000" rows="10" cols="40" required></textarea><br><br>
