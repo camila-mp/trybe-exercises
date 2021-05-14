@@ -15,12 +15,14 @@
   }
   
   .logo-container {
+    width: 268px;
     display: flex;
     justify-content: center;
   }
   
   .menu-container {
     display: flex;
+    width: 500px;
   }
   
   .menu-container ul {
