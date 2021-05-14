@@ -55,6 +55,7 @@
   .movie-container {
     display: flex;
     flex-direction: column;
+    width: 700px;
   }
   
   .movie-container h2 {
@@ -76,12 +77,17 @@
     height: 150px;
     justify-content: center;
     margin: 10px;
+    width: 16%;
   }
   
   .aside-container {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
     margin: 20px;
+    width: 350px;
   }
   
   .aside-container h3, h4 {
