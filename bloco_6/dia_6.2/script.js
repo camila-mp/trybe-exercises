@@ -28,3 +28,5 @@ const picker = new Pikaday({
       weekdaysShort : ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb']
   },
   });
+
+  
