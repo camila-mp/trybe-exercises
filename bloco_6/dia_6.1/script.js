@@ -16,6 +16,11 @@ function criaMenuEstados() {
 
 criaMenuEstados();
 
+const form = document.getElementById('form');
+const nameInput = document.getElementById('nome-compl');
+const emailInput = document.getElementById('email');
+const cpfInput = document.querySelector('cpf');
+
 
 
 
