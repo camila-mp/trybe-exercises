@@ -41,9 +41,26 @@ label#label-casa{
 }
 
 label#label-resumo {
-    display: inline-block;
-    text-align: left;
-    vertical-align: top;
-    width: 120px;
-    height: 40px;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  width: 120px;
+  height: 40px;
+}
+
+input.invalid {
+  border: 1px solid red;
+}
+
+button {
+  background-color: aqua;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px 5px 10px 10px;
+}
+
+.errorDiv {
+  background-color:lightgoldenrodyellow;
 }
