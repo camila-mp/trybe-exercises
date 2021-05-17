@@ -29,12 +29,12 @@ let isValid = [];
 function checkCharacName() {
   if (nameInput.value === '' || nameInput.value.length > 40){
     isValid.push(false);
-    allInvalidInfo['name'] = 'Insira um nome válido.';
+    allInvalidInfo['Nome'] = 'Insira um nome válido.';
     nameInput.className = 'invalid';
     console.log(allInvalidInfo);
   }else{
     isValid.push(true);
-    allValidInfo['name'] = nameInput.value;
+    allValidInfo['Nome'] = nameInput.value;
     nameInput.className = 'valid';
     console.log(allValidInfo);
   };
@@ -45,12 +45,12 @@ function checkEmail() {
   let regexTestEmail = emailRegex.test(emailInput.value);
   if (emailInput.value === '' || regexTestEmail === false || emailInput.value.length > 50){
     isValid.push(false);
-    allInvalidInfo['email'] = 'Insira um email válido.';
+    allInvalidInfo['Email'] = 'Insira um email válido.';
     emailInput.className = 'invalid';
     console.log(allInvalidInfo);
   }else{
     isValid.push(true);
-    allValidInfo['email'] = emailInput.value;
+    allValidInfo['Email'] = emailInput.value;
     emailInput.className = 'valid';
     console.log(allValidInfo);
   };
@@ -59,45 +59,53 @@ function checkEmail() {
 function checkCharacCpf() {
   if (cpfInput.value === '' || cpfInput.value.length !== 11){
     isValid.push(false);
-    allInvalidInfo['cpf']= 'Insira um CPF válido.';
+    allInvalidInfo['CPF']= 'Insira um CPF válido.';
     cpfInput.className = 'invalid';
     console.log(allInvalidInfo);
   }else{
     isValid.push(true);
-    allValidInfo['cpf'] = cpfInput.value;
+    allValidInfo['CPF'] = cpfInput.value;
     cpfInput.className = 'valid';
     console.log(allValidInfo);
   };
 };
 
-function validInfoDiv(){
+function validInfoDiv() {
   if (!isValid.includes(false)){
+    resetDiv();
     const validDiv = document.createElement('div');
     divMae.appendChild(validDiv);
     validDiv.id='valid-div';
-    validDiv.innerText = 'Seguem abaixo suas informações:\n';
-    for (chave of allValidInfo){
-      validDiv.innerText += chave + ': ' + allValidInfo.chave + '\n';
+    validDiv.innerText = 'Dados inseridos:\n\n';
+    for (chave in allValidInfo){
+      validDiv.innerText += chave + ': ' + allValidInfo[chave] + '\n\n';
     };
   };
 };
 
 function invalidInfoDiv() {
   if (isValid.includes(false)){
+    resetDiv();
     const invalidDiv = document.createElement('div');
     divMae.appendChild(invalidDiv);
     invalidDiv.id='invalid-div';
-    for (item of allInvalidInfo){
-      invalidDiv.innerText += allInvalidInfo.item + '\n';
+    for (item in allInvalidInfo){
+      invalidDiv.innerText += allInvalidInfo[item] + '\n';
     };
   };
 };
 
-function validateAll () {
+function resetDiv() {
+  if (divMae.childNodes.length > 0){
+    divMae.removeChild(divMae.firstChild);
+  };
+};
+
+function validateAll() {
   checkCharacName();
   checkEmail();
   checkCharacCpf();
-}
+};
 
 form.addEventListener('submit', function(e) {
   e.preventDefault();
