@@ -1,107 +1,107 @@
-//variaveis uteis//
-let selectEstado = document.getElementById('select-estado');
+// //variaveis uteis//
+// let selectEstado = document.getElementById('select-estado');
 
-let estadosBR = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
+// let estadosBR = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
 
-//cria tags option para selecionar estado//
+// //cria tags option para selecionar estado//
 
-function criaMenuEstados() {
-  for(let index = 0; index < estadosBR.length; index += 1){
-    let opcaoSelect = document.createElement('option');
-    selectEstado.appendChild(opcaoSelect);
-    opcaoSelect.value = estadosBR[index];
-    opcaoSelect.innerText = estadosBR[index];
-  };
-};
+// function criaMenuEstados() {
+//   for(let index = 0; index < estadosBR.length; index += 1){
+//     let opcaoSelect = document.createElement('option');
+//     selectEstado.appendChild(opcaoSelect);
+//     opcaoSelect.value = estadosBR[index];
+//     opcaoSelect.innerText = estadosBR[index];
+//   };
+// };
 
-criaMenuEstados();
-
-var isFormValid = false;
+// criaMenuEstados();
 
 const form = document.getElementById('form');
-
 const nameInput= document.getElementById('nome-compl');
 const emailInput = document.getElementById('email');
 const cpfInput = document.getElementById('cpf');
-const userEmail = emailInput.value;
+const divMae = document.getElementById('divMae')
 
-const inputFields = [nameInput, emailInput, cpfInput];
-
-const descInputs = ["nome completo", "email", "CPF",
-];
-
-function inputExists() {
-  for (index = 0; index < inputFields.length; index +=1){
-    if (inputFields[index].value) {
-      inputFields[index].classList.add('valid');
-    }else{
-      inputFields[index].classList.add('invalid');
-    };
-  };
-};
+let allValidInfo = {};
+let allInvalidInfo = {};
+let isValid = [];
 
 function checkCharacName() {
-  nameInput.className = '';
-  if (nameInput.value.length > 40){
+  if (nameInput.value === '' || nameInput.value.length > 40){
+    isValid.push(false);
+    allInvalidInfo['name'] = 'Insira um nome válido.';
     nameInput.className = 'invalid';
+    console.log(allInvalidInfo);
   }else{
+    isValid.push(true);
+    allValidInfo['name'] = nameInput.value;
     nameInput.className = 'valid';
+    console.log(allValidInfo);
   };
 };
 
 function checkEmail() {
-  emailInput.className = '';
-  var validateEmail = /\S+@\S+\.\S+/.test(userEmail);
-  if (emailInput.value.length > 50 || validateEmail === false){
+  const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+  let regexTestEmail = emailRegex.test(emailInput.value);
+  if (emailInput.value === '' || regexTestEmail === false || emailInput.value.length > 50){
+    isValid.push(false);
+    allInvalidInfo['email'] = 'Insira um email válido.';
     emailInput.className = 'invalid';
+    console.log(allInvalidInfo);
   }else{
+    isValid.push(true);
+    allValidInfo['email'] = emailInput.value;
     emailInput.className = 'valid';
-    console.log('oi')
+    console.log(allValidInfo);
   };
 };
 
-function checkCharacCpf(){
-  cpfInput.className = '';
-  if (cpfInput.value === 11){
-    cpfInput.className = 'valid';
-  }else{
+function checkCharacCpf() {
+  if (cpfInput.value === '' || cpfInput.value.length !== 11){
+    isValid.push(false);
+    allInvalidInfo['cpf']= 'Insira um CPF válido.';
     cpfInput.className = 'invalid';
+    console.log(allInvalidInfo);
+  }else{
+    isValid.push(true);
+    allValidInfo['cpf'] = cpfInput.value;
+    cpfInput.className = 'valid';
+    console.log(allValidInfo);
   };
 };
 
-function createInvalidList() {
-  var newArray = [];
-  for (index2= 0; index2 < descInputs.length; index2 += 1){
-    if (inputFields[index2].className === 'invalid'){
-      newArray.push(descInputs[index2]);
+function validInfoDiv(){
+  if (!isValid.includes(false)){
+    const validDiv = document.createElement('div');
+    divMae.appendChild(validDiv);
+    validDiv.id='valid-div';
+    validDiv.innerText = 'Seguem abaixo suas informações:\n';
+    for (chave of allValidInfo){
+      validDiv.innerText += chave + ': ' + allValidInfo.chave + '\n';
     };
-  };
-  if (newArray !== []) {
-    var errorDiv = document.createElement('div');
-    body.appendChild(errorDiv);
-    errorDiv.className = 'errorDiv';
-    for (index of newArray){
-      errorDiv.innerText = 'O ' + newArray[index] + ' inserido é inválido.\n'
-    }; 
   };
 };
 
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  inputExists();
-  for (index1= 0; index1 < inputFields.length; index1 += 1){
-    if (inputFields[index1].className === 'invalid'){
-      alert("Por favor preencha todos os campos obrigatórios!")
+function invalidInfoDiv() {
+  if (isValid.includes(false)){
+    const invalidDiv = document.createElement('div');
+    divMae.appendChild(invalidDiv);
+    invalidDiv.id='invalid-div';
+    for (item of allInvalidInfo){
+      invalidDiv.innerText += allInvalidInfo.item + '\n';
     };
   };
+};
+
+function validateAll () {
   checkCharacName();
   checkEmail();
   checkCharacCpf();
-  createInvalidList();
-  console.log('hello')
+}
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  validateAll();
+  validInfoDiv();
+  invalidInfoDiv();
 });
-
-
-
-
-

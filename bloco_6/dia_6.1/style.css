@@ -48,9 +48,6 @@ label#label-resumo {
   height: 40px;
 }
 
-input.invalid {
-  border: 1px solid red;
-}
 
 button {
   background-color: aqua;
@@ -61,6 +58,14 @@ button {
   margin: 10px 5px 10px 10px;
 }
 
-.errorDiv {
+.invalid-div {
   background-color:lightgoldenrodyellow;
+  color: red;
+  font-size: 20px;
+}
+
+.valid-div {
+  background-color:lightskyblue;
+  color: black;
+  font-size: 20px;
 }
