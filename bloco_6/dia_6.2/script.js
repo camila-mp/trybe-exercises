@@ -20,13 +20,6 @@ criaMenuEstados();
 const picker = new Pikaday({
   field: document.getElementById('datepicker'),
   format: 'DD/MM/YYYY',
-  i18n: {
-      previousMonth : 'Mês Anterior',
-      nextMonth     : 'Próximo Mês',
-      months        : ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-      weekdays      : ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
-      weekdaysShort : ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb']
-  },
   });
 
   
