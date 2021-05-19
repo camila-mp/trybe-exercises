@@ -1,5 +1,8 @@
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
-// Seu código aqui.
+const oddsAndEvensFunc = (array) => {
+    let sortedArray = oddsAndEvens.sort(function(a, b){return a-b});
+    return `Os números ${sortedArray} se encontram ordenados de forma crescente!`
+}
 
-console.log(oddsAndEvens);
+console.log(oddsAndEvensFunc(oddsAndEvens));
