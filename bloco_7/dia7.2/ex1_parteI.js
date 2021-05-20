@@ -34,6 +34,7 @@ const order = {
     },
   };
   
+
 //  "Olá Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701"
 
   const customerInfo = (order) => {
@@ -47,9 +48,4 @@ const order = {
   
   customerInfo(order);
   
-  const orderModifier = (order) => {
-    // Adicione abaixo as informações necessárias.
-  
-  }
-  
-  orderModifier(order);
+
