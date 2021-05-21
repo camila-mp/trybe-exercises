@@ -18,14 +18,10 @@ const lesson1 = {
     turno: 'noite',
   };
 
-  const turno = Object.keys(lesson1)[3];
-  console.log(turno)
-
 // Crie uma função para adicionar o turno da manhã na lesson2 . Essa função deve possuir três parâmetros, sendo eles: o objeto a ser modificado, a chave que deverá ser adicionada e o valor dela.
 
 
 const lessons = (obj, chave, valor) => obj[chave] = valor;
 
-const turno = Object.keys(lesson1)[3]
 
-console.log(lessons(lesson2, 'turno', 'manhã'));
+console.log(lessons(lesson2, turno, 'manhã'));
