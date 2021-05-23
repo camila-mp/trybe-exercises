@@ -1,10 +1,6 @@
 // Crie uma função para mostrar o tamanho de um objeto.
 
-const objectSize = (object) => {
-    let arrayEntries = Object.entries(object);
-    let objSize = arrayEntries.length;
-    return objSize;
-}
+const objectSize = (object) => Object.entries(object).length;
 
 // teste
 
