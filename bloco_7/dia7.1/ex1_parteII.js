@@ -3,7 +3,7 @@ const retornaFatorial = (num) => {
   while (num >= 1){
     guardaNum = guardaNum * num;
     num -= 1; }
-  return console.log(guardaNum);
+  return guardaNum;
 }
 
-retornaFatorial(7);
+console.log(retornaFatorial(7));
