@@ -1,0 +1,1 @@
+// Crie uma função para mostrar o tamanho de um objeto.
