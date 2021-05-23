@@ -6,4 +6,4 @@ const retornaFatorial = (num) => {
   return console.log(guardaNum);
 }
 
-retornaFatorial(4);
+retornaFatorial(7);
