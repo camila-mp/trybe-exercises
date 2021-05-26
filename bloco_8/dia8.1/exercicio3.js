@@ -3,24 +3,24 @@
 // Quando a resposta for correta a contagem sobe 1 ponto, quando for incorreta desce 0.5 pontos, e quando não houver resposta ("N.A") não altera-se a contagem.
 
 const corrige = (gabarito, estudante) => {
-  let pontos = 0;
-  for (let questao = 0; questao < gabarito.length; questao += 1){
-    if (gabarito[questao] === estudante[questao]){
-      pontos += 1;
-    } else if (gabarito[questao] !== estudante[questao]){
-      pontos -= 0.5;
-    } else if (estudante[questao] === 'N.A'){
-      pontos;
-    }
+  if (gabarito === estudante){
+    return 1;
+  } else if (gabarito !== estudante){
+    return -0.5;
+  } else if (estudante === 'N.A'){
+    return 0;
   }
-  return pontos;
 };
 
 const studentAnswers = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 const rightAnswers =    ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 
 const geraResultado = (rightAnswers, studentAnswers, corrige) => {
-    return corrige(rightAnswers, studentAnswers);
+  let pontos = 0;
+  for (index = 0; index < rightAnswers.length; index += 1){
+    pontos += corrige(rightAnswers[index], studentAnswers[index]);
+  }
+    return `Resultado final: ${pontos} pontos.`;
 };
 
 console.log(geraResultado(rightAnswers, studentAnswers, corrige));
