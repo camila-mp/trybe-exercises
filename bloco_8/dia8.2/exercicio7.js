@@ -69,16 +69,8 @@ const books = [
 const expectedResult = false;
 
 function authorUnique() {
-    let mesmoAno = true;
-  return books.forEach((book) => { 
-    aBirth = book.author.birthYear
-    for(index = 1; index < books.length; index += 1){
-      if (aBirth === books[index].author.birthYear){
-        let mesmoAno = false;
-      };
-    };
 
-  })
+
 }
 
 assert.strictEqual(authorUnique(), expectedResult);
