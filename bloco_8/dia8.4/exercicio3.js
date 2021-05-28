@@ -76,4 +76,6 @@ function averageAge() {
   return books.reduce(somaIdades, 0) / 6;
 };
 
+// DUVIDA: porque so funciona se eu adicionar o segundo parametro de reduce (o numero 0)?
+
 assert.strictEqual(averageAge(), expectedResult);
