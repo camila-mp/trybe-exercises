@@ -68,7 +68,12 @@ const books = [
 const expectedResult = 43;
 
 function averageAge() {
-  // escreva seu código aqui
-}
+  const somaIdades = (soma, livro) => {
+    let idadeLan = livro.releaseYear - livro.author.birthYear;
+    return soma += idadeLan;
+  };
+
+  return books.reduce(somaIdades, 0) / 6;
+};
 
 assert.strictEqual(averageAge(), expectedResult);
