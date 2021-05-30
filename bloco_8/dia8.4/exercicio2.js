@@ -69,7 +69,6 @@ const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Fra
 
 function reduceNames() {
   const stringNames = (acumulador, elemento) => {
-
     if (elemento.id === 6){
       return acumulador += `${elemento.author.name}.`
     }else{
