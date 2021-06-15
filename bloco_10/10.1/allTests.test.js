@@ -23,3 +23,17 @@ describe('testa se a função lança a mensagem de erro "parameters must be numb
   test('parametros 4 e "5"', () => { expect(() => { sum(4, '5') }).toThrowError(new Error('parameters must be numbers')) 
   });
 })
+
+const myRemove = require('./ex2');
+
+// Verifique se a chamada myRemove([1, 2, 3, 4], 3) retorna o array esperado
+// Verifique se a chamada myRemove([1, 2, 3, 4], 3) não retorna o array [1, 2, 3, 4]
+// Verifique se o array passado por parâmetro não sofreu alterações
+// Verifique se a chamada myRemove([1, 2, 3, 4], 5) retorna o array esperado
+
+describe ('testa se o retorno da função é igual ao esperado', () => {
+  test('testa o retorno da função com parametros [1, 2, 3, 4] e 3', () => { 
+    expect(myRemove([1, 2, 3, 4], 3)).toEqual([1, 2, 4]) })
+})
+
+
