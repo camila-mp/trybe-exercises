@@ -16,7 +16,6 @@ describe('testa retorno quando o usuario não é encontrado', () => {
             const userrName = await getUserName(8);
         } catch(error) {
             expect(error).toEqual({ error: 'User with 8 not found.' })
-        }
-        
+        } 
     })
 })
