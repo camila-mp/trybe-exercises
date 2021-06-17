@@ -11,3 +11,5 @@ function getFirstLetter(stringg) {
 function concatenateStrings(string1, string2) {
   return  string1 + string2
 }
+
+module.exports { getUpperCase, getFirstLetter, concatenateStrings }
