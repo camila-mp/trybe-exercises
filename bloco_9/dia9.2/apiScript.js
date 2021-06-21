@@ -1,15 +1,8 @@
-// apiScript.js     
 const API_URL = 'https://icanhazdadjoke.com/';
 
-const fetchJoke = () => {
-  const myObject = {
-    method: 'GET',
-    headers: { 'Accept': 'application/json' }
-  };
-
-  fetch(API_URL, myObject)
-    .then(response => response.json())
-    .then(data => console.log(data));
-};
+const fetchJoke = async () => {
+  const fetchJ = await (await (fetch(API_URL, { headers: { Accept: 'application/json' } }))).json();
+  document.getElementById('jokeContainer').innerText = fetchJ.joke;
+}
 
 window.onload = () => fetchJoke();
