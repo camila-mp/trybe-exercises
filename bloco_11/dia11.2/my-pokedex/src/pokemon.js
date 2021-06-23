@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 class Pokemon extends React.Component {
   render() {
     const { id, name, type, averageWeight, image } = this.props.pokemon
+    console.log(this.props)
     return (
       <section className="pokemon">
         <p>{ `Nome: ${name}` }</p>
