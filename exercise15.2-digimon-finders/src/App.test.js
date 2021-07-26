@@ -29,7 +29,6 @@ describe('Teste da aplicação toda', () => {
     render(<App />, <Digimon />);
     const searchBtn = screen.getByTestId('buttonSearch');
     const digimonInput = screen.getByTestId('input');
-    // const digimonImg = screen.findByAltText('Agumon')
     fireEvent.change(digimonInput, { target: { value: 'agumon' } });
     fireEvent.click(searchBtn);
     await screen.findByText('Agumon');
